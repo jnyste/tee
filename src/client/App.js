@@ -14,7 +14,7 @@ const styles = theme => ({
       width: 1100,
       marginLeft: 'auto',
       marginRight: 'auto',
-    },
+    }
 }});
 
 function App(props) {
@@ -24,7 +24,7 @@ function App(props) {
     <React.Fragment>
       <CssBaseline />
       <div className={classes.layout}>
-        <Grid container direction="column" alignItems="stretch">
+        <Grid container direction="column" alignItems="stretch" spacing={16}>
             <ListItem text="This is a very long test"/>
             <ListItem text="Short"/>
         </Grid>

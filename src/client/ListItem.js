@@ -21,7 +21,7 @@ export default class ListItem extends Component {
         return (
             <Grid item xs={6}>
                 <Paper>
-                    <Typography component="h3">{this.props.text}</Typography>
+                    <Typography component="h3" variant="h3">{this.props.text}</Typography>
                 </Paper>
             </Grid>
             )};
