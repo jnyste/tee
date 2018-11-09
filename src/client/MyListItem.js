@@ -9,6 +9,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Checkbox from '@material-ui/core/Checkbox';
 import CheckBoxOutlineBlank from '@material-ui/icons/CheckBoxOutlineBlank';
 import CheckBox from '@material-ui/icons/CheckBox';
+import IndeterminateCheckBox from '@material-ui/icons/CheckBox';
 
 
 const styles = theme => ({
@@ -65,7 +66,7 @@ class MyListItem extends React.Component {
         case 2:
         return <CheckBox onClick={this.handleClick}/>
         default:
-        return <p>broken</p>
+        return <IndeterminateCheckBox onClick={this.handleClick}/>
     }
   }
 
