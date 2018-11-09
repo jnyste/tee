@@ -15,13 +15,15 @@ const styles = theme => ({
 });
 
 class ListItem extends React.Component {
+  
   constructor(props) {
       super(props);
   }
+
   render () {
     return (
         <Grid item xs={12}>
-            <Paper className={styles.root}>
+            <Paper className={this.props.classes.root}>
                 <Typography component="h3" variant="h3">{this.props.text}</Typography>
             </Paper>
         </Grid>
