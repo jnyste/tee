@@ -78,7 +78,7 @@ function App(props) {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Grid container direction="column" alignItems="stretch" spacing={16}>
-            <ListItem text="vittttuuuuuuu"/>
+            <MyListItem text="test"/>
         </Grid>
       </main>
     </div>
