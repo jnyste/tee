@@ -16,6 +16,11 @@ export default class App extends Component {
     return (
       <div>
         <ListItem/>
+        <ListItem/>
+        <ListItem/>
+        <ListItem/>
+        <ListItem/>
+        
       </div>
     );
   }
