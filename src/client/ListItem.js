@@ -19,6 +19,10 @@ export default class ListItem extends Component {
     
     render() {
         return (
-            <div></div>
+            <Grid item xs={6}>
+                <Paper>
+                    <Typography component="h3">{this.props.text}</Typography>
+                </Paper>
+            </Grid>
             )};
 };

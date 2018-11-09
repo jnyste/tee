@@ -2,17 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Hidden from '@material-ui/core/Hidden';
-import Button from '@material-ui/core/Button';
-import Divider from '@material-ui/core/Divider';
 
 const styles = theme => ({
   layout: {
@@ -24,7 +13,7 @@ const styles = theme => ({
       marginLeft: 'auto',
       marginRight: 'auto',
     },
-  }});
+}});
 
 function App(props) {
   const { classes } = props;
@@ -33,6 +22,10 @@ function App(props) {
     <React.Fragment>
       <CssBaseline />
       <div className={classes.layout}>
+        <Grid container direction="column" alignItems="stretch">
+            <ListItem text="This is a very long test"/>
+            <ListItem text="Short"/>
+        </Grid>
       </div>
     </React.Fragment>
   );
