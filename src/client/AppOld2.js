@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import ListItem from './ListItem.js';
+import MyListItem from './MyListItem.js';
 import MenuBar from './MenuBar.js';
 import CategoryDrawer from './CategoryDrawer.js';
 import Typography from '@material-ui/core/Typography';
@@ -25,7 +25,7 @@ const styles = theme => ({
         padding: theme.spacing.unit * 3
     }});
 
-function App(props) {
+ function App(props) {
   const { classes } = props;
 
   return (
@@ -56,6 +56,6 @@ function App(props) {
         </div>
     </React.Fragment>
   );
-}
+} */
 
 export default withStyles(styles)(App);

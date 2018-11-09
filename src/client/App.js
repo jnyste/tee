@@ -14,7 +14,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import BuildIcon from '@material-ui/icons/Build';
-import ListItem from './ListItem.js'
+import MyListItem from './MyListItem.js'
 
 const drawerWidth = 240;
 
