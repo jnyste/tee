@@ -13,6 +13,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import BuildIcon from '@material-ui/icons/Build';
 
 const drawerWidth = 240;
 
@@ -65,7 +66,7 @@ function App(props) {
         <List>
           {['Category 1', 'Category 2', 'Category 3', 'Category 4'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemIcon><BuildIcon/></ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
           ))}
