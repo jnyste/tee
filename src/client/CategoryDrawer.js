@@ -41,4 +41,4 @@ class CategoryDrawer extends React.Component {
   }
 }
 
-export default withStyles(styles)(ListItem);
+export default withStyles(styles)(CategoryDrawer);
