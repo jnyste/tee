@@ -18,7 +18,7 @@ export default class ListItem extends Component {
     
     render() {
         return (
-        <Grid item xs={6}>
+        <Grid item xs={6} style={{min-width: 50%}} >
         <Card>
             <CardContent>
             <Typography variant="h5">
