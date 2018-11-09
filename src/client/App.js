@@ -25,9 +25,9 @@ function App(props) {
       <CssBaseline />
       <div className={classes.layout}>
         <Grid container direction="column" alignItems="stretch" spacing={16}>
-            <ListItem text="This is a very long test"/>
-            <ListItem text="Short"/>
-            <ListItem text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
+            <ListItem text="Ping www.google.com"/>
+            <ListItem text=""/>
+            <ListItem text="Do something else cool"/>
         </Grid>
       </div>
     </React.Fragment>
