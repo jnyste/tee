@@ -16,6 +16,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import BuildIcon from '@material-ui/icons/Build';
 import MyListItem from './MyListItem.js'
 import Grid from '@material-ui/core/Grid';
+import Checkbox from '@material-ui/core/Checkbox';
 
 const drawerWidth = 240;
 
@@ -78,7 +79,7 @@ function App(props) {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Grid container direction="column" alignItems="stretch" spacing={16}>
-            <MyListItem text="test"/>
+            <MyListItem text="Ping www.google.com"/>
         </Grid>
       </main>
     </div>
