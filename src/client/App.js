@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './app.css';
 import ListItem from './ListItem.js';
+import Grid from '@material-ui/core/Grid';
 
 export default class App extends Component {
   state = { username: null };
@@ -14,14 +15,13 @@ export default class App extends Component {
   render() {
     const { username } = this.state;
     return (
-      <div>
+      <Grid container>
         <ListItem/>
         <ListItem/>
         <ListItem/>
         <ListItem/>
         <ListItem/>
-        
-      </div>
+      </Grid>
     );
   }
 }
