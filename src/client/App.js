@@ -15,13 +15,9 @@ export default class App extends Component {
   render() {
     const { username } = this.state;
     return (
-      <Grid container alignItems="center">
-        <Grid container item xs={6} justify="center" alignItems="stretch" spacing={16}>
-          <ListItem text="Ping www.google.com"/>
-          <ListItem text=". "/>
-          <ListItem text="aaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
-        </Grid>
-      </Grid>
+        <React.Fragment>
+        asd  
+        </React.Fragment>
     );
   }
 }
