@@ -20,7 +20,7 @@ class MyListItem extends React.Component {
   
   constructor(props) {
       super(props);
-      this.state = {status: 0, checked = false}
+      this.state = {status: 0, checked: false}
   }
 
   handleChange = name => event => {
