@@ -23,17 +23,28 @@ class MyListItem extends React.Component {
       this.state = {status: 0, checked: false}
   }
 
-  handleChange = name => event => {
+ onClick() {
+
+      if (this.state.status != 0) {
+          return;
+      }
+
+      this.setState({
+          status: 1
+      })
 
       fetch(this.props.action).then(function(response) {
           return response.json();
       }).then(function(myJson) {
           console.log(myJson["status"]);
+          if (myJson["status"] == 0) {
+              this.setState({ status: 2})
+          } else {
+              this.setState({ status: -1});
+          }
       });
 
-      this.setState({
-          [name]: event.target.checked
-      });
+
   };
 
   render () {
@@ -48,7 +59,14 @@ class MyListItem extends React.Component {
   }
 
   renderStatus() {
-    return <Checkbox checked={this.state.checked} onChange={this.handleChange('checked')} value="checked"/>
+    switch (this.state.status) {
+        case 0:
+        return <Checkbox checked={this.state.checked} onClick={this.onClick()} value=""/>
+        case 2:
+        return <Checkbox checked={this.state.checked} onClick={this.onClick()} value="checked"/>
+        default:
+        return <p>broken</p>
+    }
   }
 
 }
