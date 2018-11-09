@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './app.css';
-import ListItem from 'ListItem';
+import ListItem from './ListItem.js';
 
 export default class App extends Component {
   state = { username: null };
