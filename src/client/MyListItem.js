@@ -24,7 +24,7 @@ class MyListItem extends React.Component {
       this.handleClick = this.handleClick.bind(this);
   }
 
- handleClick = () => {
+ handleClick() {
 
       if (this.state.status != 0) {
           return;
@@ -32,19 +32,15 @@ class MyListItem extends React.Component {
 
       this.setState(state => {
           status: 1
-      })
-
-      fetch(this.props.action).then(function(response) {
-          return response.json();
-      }).then(function(myJson) {
-          console.log(myJson["status"]);
-          if (myJson["status"] == 0) {
-              this.setState({ status: 2})
-          } else {
-              this.setState({ status: -1});
-          }
       });
-
+    
+      fetch(this.props.action).then((response) => response.json()).then((json) => {
+        if (json["status"] == 0) {
+            this.setState({ status: 2})
+        } else {
+            this.setState({ status: -1});
+        }
+      });
 
   };
 
