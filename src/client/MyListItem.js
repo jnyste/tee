@@ -27,7 +27,7 @@ class MyListItem extends React.Component {
       fetch(this.props.action).then(function(response) {
           console.log(response.json());
       });
-      
+
       this.setState({
           [name]: event.target.checked
       });
@@ -37,7 +37,7 @@ class MyListItem extends React.Component {
     return (
         <Grid item xs={12}>
             <Paper className={this.props.classes.root}>
-                <Typography component="h3" variant="h3">{this.props.text}</Typography>
+                <Typography component="h3" variant="h3">{this.props.text} {this.props.action}</Typography>
                 { this.renderStatus() }
             </Paper>
         </Grid>
