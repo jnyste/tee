@@ -25,8 +25,8 @@ function App(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <MenuBar/>
       <CategoryDrawer />
+      <MenuBar/>
       <div className={classes.layout}>
         <Grid container direction="column" alignItems="stretch" spacing={16}>
             <ListItem text="Ping www.google.com"/>
