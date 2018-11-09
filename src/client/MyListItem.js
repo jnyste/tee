@@ -11,7 +11,7 @@ import CheckBoxOutlineBlank from '@material-ui/icons/CheckBoxOutlineBlank';
 import CheckBox from '@material-ui/icons/CheckBox';
 import IndeterminateCheckBox from '@material-ui/icons/IndeterminateCheckBox';
 import TouchRipple from '@material-ui/core/ButtonBase/TouchRipple';
-import TouchRipple from '@material-ui/core/ButtonBase';
+import ButtonBase from '@material-ui/core/ButtonBase';
 
 const styles = theme => ({
     root: {
