@@ -20,7 +20,7 @@ export default class ListItem extends Component {
         <Card>
             <CardContent>
                 <Typography variant="h5">
-                    asd
+                    {this.props.text}
                 </Typography>
             </CardContent>
         </Card>        

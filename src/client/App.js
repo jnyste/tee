@@ -15,12 +15,12 @@ export default class App extends Component {
   render() {
     const { username } = this.state;
     return (
-      <Grid container>
-        <ListItem/>
-        <ListItem/>
-        <ListItem/>
-        <ListItem/>
-        <ListItem/>
+      <Grid container column>
+        <ListItem text="Ping www.google.com"/>
+        <ListItem text="Play more Eurobeat"/>
+        <ListItem text="Juo es :D "/>
+        <ListItem text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
+        <ListItem text="tööt"/>
       </Grid>
     );
   }
