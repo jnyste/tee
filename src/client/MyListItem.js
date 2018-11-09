@@ -28,13 +28,13 @@ class MyListItem extends React.Component {
         <Grid item xs={12}>
             <Paper className={this.props.classes.root}>
                 <Typography component="h3" variant="h3">{this.props.text}</Typography>
-                { renderStatus() }
+                { this.renderStatus() }
             </Paper>
         </Grid>
     );
   }
 
-  function renderStatus() {
+  renderStatus() {
     if (this.state.status == 0)
         return <Checkbox checked="false"/>
     else if (this.state.status == 1)
