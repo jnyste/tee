@@ -29,5 +29,7 @@ export default class ListItem extends Component {
         </Paper>
         </Grid>
         <Grid item xs={3}/>        
+
+        </div>
         )};
 };
