@@ -57,11 +57,13 @@ class MyListItem extends React.Component {
 
   render () {
     return (
+        <ButtonBase fullWidth="true">
         <Grid item xs={12}>
             <Paper onClick={this.handleClick} className={this.state.status == 2 ? this.props.classes.success : this.props.classes.root}>
                 <Typography component="h3" variant="h4">{ this.renderStatus() } {this.props.text}</Typography>
             </Paper>
         </Grid>
+        </ButtonBase>
     );
   }
 
