@@ -10,6 +10,7 @@ const styles = theme => ({
     root: {
         paddingTop: theme.spacing.unit * 2,
         paddingBottom: theme.spacing.unit * 2,
+        backgroundColor: 'red'
     }
 });
 
