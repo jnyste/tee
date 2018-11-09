@@ -11,7 +11,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
 
 const styles = theme => ({
-    
+    menubar: {
+    }
 });
 
 class MenuBar extends React.Component {
@@ -22,12 +23,12 @@ class MenuBar extends React.Component {
 
   render () {
     return (
-        <AppBar position="static">
+        <AppBar position="fixed">
             <Toolbar color="inherit">
                 <IconButton color="inherit" aria-label="Menu">
                     <MenuIcon />    
                 </IconButton>
-                <Typography variant="h6" color="inherit" className={this.props.classes.grow}>
+                <Typography variant="h6" color="inherit" className={this.props.classes.menubar}>
                     Tasks 
                 </Typography>
             </Toolbar>
