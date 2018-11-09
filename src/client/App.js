@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './app.css';
-import ReactImage from './react.png';
+import ListItem from './ListItem.js';
+import Grid from '@material-ui/core/Grid';
 
 export default class App extends Component {
   state = { username: null };
@@ -14,9 +15,11 @@ export default class App extends Component {
   render() {
     const { username } = this.state;
     return (
-      <div>
-        Moikka
-      </div>
+      <Grid container justify="center" alignItems="center" direction="column" spacing={16}>
+        <ListItem text="Ping www.google.com"/>
+        <ListItem text="."/>
+        <ListItem text="aaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
+      </Grid>
     );
   }
 }
