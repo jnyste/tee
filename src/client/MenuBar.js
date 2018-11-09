@@ -27,7 +27,7 @@ class MenuBar extends React.Component {
                     <MenuIcon />    
                 </IconButton>
                 <Typography variant="h6" color="inherit" className={this.props.classes.grow}>
-                    Tasks
+                    Tasks 
                 </Typography>
             </Toolbar>
         </AppBar>
