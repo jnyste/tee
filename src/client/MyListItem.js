@@ -61,11 +61,11 @@ class MyListItem extends React.Component {
   renderStatus() {
     switch (this.state.status) {
         case 0:
-        return <CheckBoxOutlineBlank style={{color: 'green'}} onClick={this.handleClick}/>
+        return <CheckBoxOutlineBlank onClick={this.handleClick}/>
         case 2:
-        return <CheckBox onClick={this.handleClick}/>
+        return <CheckBox style={{color: 'green'}} onClick={this.handleClick}/>
         default:
-        return <IndeterminateCheckBox onClick={this.handleClick}/>
+        return <IndeterminateCheckBox style={{color: 'red'}} onClick={this.handleClick}/>
     }
   }
 
