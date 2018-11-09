@@ -18,7 +18,7 @@ export default class ListItem extends Component {
     
     render() {
         return (
-        <Grid item xs={3}>
+        <Grid item xs={6}>
         <Card>
             <CardContent>
             <Typography variant="h5">
