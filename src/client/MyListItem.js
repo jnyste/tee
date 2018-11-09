@@ -38,9 +38,9 @@ class MyListItem extends React.Component {
     if (this.state.status == 0)
         return <Checkbox checked="false"/>
     else if (this.state.status == 1)
-        <CircularProgress />
+        return <CircularProgress />
     else
-        <Checkbox checked="true"/>
+        return <Checkbox checked="true"/>
   }
 }
 
