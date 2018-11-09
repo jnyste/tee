@@ -8,7 +8,6 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
     root: {
-        ...theme.mixins.gutters(),
         paddingTop: theme.spacing.unit * 2,
         paddingBottom: theme.spacing.unit * 2,
     }
@@ -21,7 +20,7 @@ class ListItem extends React.Component {
   render () {
     return (
         <Grid item xs={12}>
-            <Paper>
+            <Paper className={styles.root}>
                 <Typography component="h3" variant="h3">{this.props.text}</Typography>
             </Paper>
         </Grid>
