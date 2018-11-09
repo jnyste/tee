@@ -3,6 +3,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 
 export default class ListItem extends Component {
     
@@ -19,13 +20,11 @@ export default class ListItem extends Component {
     render() {
         return (
         <Grid item xs={6} >
-        <Card>
-            <CardContent>
+        <Paper>
             <Typography variant="h5">
                     {this.props.text}
             </Typography>
-            </CardContent>
-        </Card>
+        </Paper>
         </Grid>        
         )};
 };
