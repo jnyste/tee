@@ -8,7 +8,10 @@ import { withStyles } from '@material-ui/core/styles';
 class App extends Component {
 
   state = { username: null };
-  const { classes } = this.props;
+  
+  constructor(props) {
+      const { classes } = this.props;
+  }
 
   componentDidMount() {
     /* fetch('/api/getUsername')
