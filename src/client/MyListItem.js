@@ -28,19 +28,19 @@ class MyListItem extends React.Component {
         <Grid item xs={12}>
             <Paper className={this.props.classes.root}>
                 <Typography component="h3" variant="h3">{this.props.text}</Typography>
-                {switch(this.state.status) {
-                    case 0:
-                        <Checkbox checked="false"/>
-                        break;
-                    case 1:
-                        <CircularProgress />
-                        break;
-                    case 2:
-                        <Checkbox checked="true"/>
-                }}
+                { renderStatus() }
             </Paper>
         </Grid>
     );
+  }
+
+  renderStatus() {
+    if (this.state.status == 0)
+        return <Checkbox checked="false"/>
+    else if (this.state.status == 1)
+        <CircularProgress />
+    else
+        <Checkbox checked="true"/>
   }
 }
 
