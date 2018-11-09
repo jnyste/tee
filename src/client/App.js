@@ -5,7 +5,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import ListItem from './ListItem.js';
 import MenuBar from './MenuBar.js';
-import CategoryDrawer from './CategoryDrawer.js';
 
 const styles = theme => ({
   layout: {
@@ -26,7 +25,6 @@ function App(props) {
     <React.Fragment>
       <CssBaseline />
       <MenuBar/>
-      <CategoryDrawer />
       <div className={classes.layout}>
         <Grid container direction="column" alignItems="stretch" spacing={16}>
             <ListItem text="Ping www.google.com"/>
