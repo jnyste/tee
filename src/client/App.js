@@ -26,7 +26,7 @@ function App(props) {
       <div className={classes.layout}>
         <Grid container direction="column" alignItems="stretch" spacing={16}>
             <ListItem text="Ping www.google.com"/>
-            <ListItem text=""/>
+            <ListItem text="Ping www.google.com again"/>
             <ListItem text="Do something else cool"/>
         </Grid>
       </div>
