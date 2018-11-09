@@ -60,7 +60,7 @@ class MyListItem extends React.Component {
         case 0:
         return <Checkbox checked={this.state.checked} onClick={this.handleClick} value=""/>
         case 2:
-        return <Checkbox defaultChecked onClick={this.handleClick} value="checked"/>
+        return <Checkbox checked={this.state.checked} defaultChecked onClick={this.handleClick} value="checked"/>
         default:
         return <p>broken</p>
     }
