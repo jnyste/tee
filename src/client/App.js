@@ -80,7 +80,7 @@ function App(props) {
         <div className={classes.toolbar} />
         <Grid container direction="column" alignItems="stretch" spacing={16}>
             <MyListItem text="Ping www.google.com" action="/api/shellPing/www.google.com"/>
-            <MyListItem text="Ping www.fajisiajfhuahsufsaf.com" action="/api/shellPing/www.ajisiajfhuahsufsa.com"/>
+            <MyListItem text="Ping a fake website that doesn't exist" action="/api/shellPing/www.ajisiajfhuahsufsa.com"/>
         </Grid>
       </main>
     </div>
