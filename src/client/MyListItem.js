@@ -10,7 +10,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import CheckBoxOutlineBlank from '@material-ui/icons/CheckBoxOutlineBlank';
 import CheckBox from '@material-ui/icons/CheckBox';
 import IndeterminateCheckBox from '@material-ui/icons/IndeterminateCheckBox';
-import TouchRipple from 'material-ui/internal/TouchRipple';
+import TouchRipple from '@material-ui/core/ButtonBase/TouchRipple';
 
 const styles = theme => ({
     root: {
