@@ -63,3 +63,6 @@ typings/
 # IDEA
 .idea
 .idea/
+
+# Vagrant
+.vagrant/
