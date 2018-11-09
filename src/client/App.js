@@ -15,7 +15,7 @@ export default class App extends Component {
   render() {
     const { username } = this.state;
     return (
-      <Grid container justify="center" alignItems="stretch" orientation="column" spacing={16}>
+      <Grid container justify="center" alignItems="stretch" direction="column" spacing={16}>
         <ListItem text="Ping www.google.com"/>
         <ListItem text=". "/>
         <ListItem text="aaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
