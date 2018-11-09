@@ -1,0 +1,32 @@
+Spring Lime
+D2E190
+
+Lime Lighter
+B5CF49
+
+Android Green
+A3BF45
+
+Matcha Middle-lighter
+81A140
+
+Matcha Middle
+74923A
+
+Matcha Dark
+617B30
+
+Mint Green
+3D693D
+
+Light Cream
+F6F0D8
+
+Beige
+F5C998
+
+Browner
+DFAD7E
+
+Slateish
+4E4848
