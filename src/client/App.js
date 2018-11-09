@@ -27,7 +27,7 @@ function App(props) {
         <Grid container direction="column" alignItems="stretch" spacing={16}>
             <ListItem text="This is a very long test"/>
             <ListItem text="Short"/>
-            <ListItem text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
+            <ListItem text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
         </Grid>
       </div>
     </React.Fragment>
