@@ -61,9 +61,9 @@ class MyListItem extends React.Component {
   renderStatus() {
     switch (this.state.status) {
         case 0:
-        return <Checkbox checked={this.state.checked} onClick={this.onClick()} value=""/>
+        return <Checkbox checked={this.state.checked} onClick={this.onClick} value=""/>
         case 2:
-        return <Checkbox checked={this.state.checked} onClick={this.onClick()} value="checked"/>
+        return <Checkbox checked={this.state.checked} onClick={this.onClick} value="checked"/>
         default:
         return <p>broken</p>
     }
