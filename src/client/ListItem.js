@@ -22,7 +22,7 @@ class ListItem extends React.Component {
 
   render () {
     return (
-        <Grid item xs={12}>
+        <Grid item xs={6}>
             <Paper className={this.props.classes.root}>
                 <Typography component="h3" variant="h3">{this.props.text}</Typography>
             </Paper>
