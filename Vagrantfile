@@ -62,12 +62,14 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
-    apt-get install -y build-essential
+    apt-get install -y build-essential curl gcc g++ make
     curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
     apt-get install -y nodejs git
-    mkdir /opt/tee
-    cd /opt/tee
+    cd /opt/
     git clone https://github.com/jnyste/tee.git
+    cd /opt/tee
+    chown vagrant:vagrant -R .
+    npm install
     npm run dev
   SHELL
 end
