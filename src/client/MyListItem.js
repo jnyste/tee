@@ -34,7 +34,7 @@ class MyListItem extends React.Component {
     );
   }
 
-  renderStatus() {
+  function renderStatus() {
     if (this.state.status == 0)
         return <Checkbox checked="false"/>
     else if (this.state.status == 1)
