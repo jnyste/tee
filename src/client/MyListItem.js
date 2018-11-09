@@ -28,7 +28,7 @@ class MyListItem extends React.Component {
         <Grid item xs={12}>
             <Paper className={this.props.classes.root}>
                 <Typography component="h3" variant="h3">{this.props.text}</Typography>
-                switch(this.state.status) {
+                {switch(this.state.status) {
                     case 0:
                         <Checkbox checked="false"/>
                         break;
@@ -37,7 +37,7 @@ class MyListItem extends React.Component {
                         break;
                     case 2:
                         <Checkbox checked="true"/>
-                }
+                }}
             </Paper>
         </Grid>
     );
