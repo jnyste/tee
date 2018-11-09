@@ -12,6 +12,7 @@ import IconButton from '@material-ui/core/IconButton';
 
 const styles = theme => ({
     menubar: {
+        marginLeft: 240
     }
 });
 
