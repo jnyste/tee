@@ -27,7 +27,8 @@ class CategoryDrawer extends React.Component {
   render () {
     return (
         <Drawer
-            variant="permanent">
+            variant="permanent"
+            anchor="left">
             <Divider/>
             <List>
                 {['Category 1', 'Category 2', 'Category 3'].map((text, index) => (
