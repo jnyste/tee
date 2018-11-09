@@ -9,7 +9,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Checkbox from '@material-ui/core/Checkbox';
 import CheckBoxOutlineBlank from '@material-ui/icons/CheckBoxOutlineBlank';
 import CheckBox from '@material-ui/icons/CheckBox';
-import IndeterminateCheckBox from '@material-ui/icons/CheckBox';
+import IndeterminateCheckBox from '@material-ui/icons/IndeterminateCheckBox';
 
 
 const styles = theme => ({
@@ -52,7 +52,8 @@ class MyListItem extends React.Component {
     return (
         <Grid item xs={12}>
             <Paper className={this.props.classes.root}>
-                <Typography component="h3" variant="h4">{this.props.text}  { this.renderStatus() }</Typography>
+                <Typography component="h3" variant="h1">{ this.renderStatus() }</Typography>
+                <Typography component="h3" variant="h4">{this.props.text}</Typography>
             </Paper>
         </Grid>
     );
@@ -65,7 +66,7 @@ class MyListItem extends React.Component {
         case 2:
         return <CheckBox onClick={this.handleClick}/>
         default:
-        return <p>asd</p>// <IndeterminateCheckBox onClick={this.handleClick}/>
+        return <IndeterminateCheckBox onClick={this.handleClick}/>
     }
   }
 
