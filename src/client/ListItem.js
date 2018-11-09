@@ -20,6 +20,7 @@ export default class ListItem extends Component {
     render() {
         return (
             <div>
+                <Grid item xs={3}/>
         <Grid item xs={6}>
         <Paper>
             <Typography variant="h5">
@@ -28,6 +29,5 @@ export default class ListItem extends Component {
         </Paper>
         </Grid>
         <Grid item xs={3}/>        
-        </div>
         )};
 };
