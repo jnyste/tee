@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import ListItem from './ListItem.js';
 import MenuBar from './MenuBar.js';
 import CategoryDrawer from './CategoryDrawer.js';
-
+import Typography from '@material-ui/core/Typography';
 const styles = theme => ({
   layout: {
     display: "flex" /*
