@@ -51,7 +51,7 @@ class MyListItem extends React.Component {
     return (
         <Grid item xs={12}>
             <Paper className={this.props.classes.root}>
-                <Typography component="h3" variant="h3">{this.props.text} {this.props.action}</Typography>
+                <Typography component="h3" variant="h3">{this.props.text} {this.props.action} {this.state.status}</Typography>
                 { this.renderStatus() }
             </Paper>
         </Grid>
