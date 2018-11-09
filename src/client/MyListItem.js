@@ -17,6 +17,12 @@ const styles = theme => ({
         paddingTop: theme.spacing.unit * 2,
         paddingBottom: theme.spacing.unit * 2,
         paddingLeft: theme.spacing.unit * 2
+    },
+    success: {
+        paddingTop: theme.spacing.unit * 2,
+        paddingBottom: theme.spacing.unit * 2,
+        paddingLeft: theme.spacing.unit * 2,
+        backgroundColor: 'green'
     }
 });
 
@@ -51,7 +57,7 @@ class MyListItem extends React.Component {
   render () {
     return (
         <Grid item xs={12}>
-            <Paper onClick={this.handleClick} className={this.props.classes.root}>
+            <Paper onClick={this.handleClick} className={this.state.status == 2 ? this.props.classes.root : this.props.classes.success}>
                 <Typography component="h3" variant="h4">{ this.renderStatus() } {this.props.text}</Typography>
             </Paper>
         </Grid>
