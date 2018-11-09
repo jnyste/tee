@@ -8,9 +8,22 @@ import { withStyles } from '@material-ui/core/styles';
 class App extends Component {
 
   state = { username: null };
-  
+
   constructor(props) {
       const { classes } = this.props;
+      
+      const styles = theme => ({
+        layout: {
+            width: 'auto',
+            marginLeft: theme.spacing.unit * 3,
+            marginRight: theme.spacing.unit * 3,
+            [theme.breakpoints.up(1100 + theme.spacing.unit * 3 * 2)]: {
+              width: 1100,
+              marginLeft: 'auto',
+              marginRight: 'auto',
+            }
+        }
+      });
   }
 
   componentDidMount() {
@@ -18,19 +31,6 @@ class App extends Component {
       .then(res => res.json())
       .then(user => this.setState({ username: user.username })); */
   }
-
-  styles = theme => ({
-    layout: {
-        width: 'auto',
-        marginLeft: theme.spacing.unit * 3,
-        marginRight: theme.spacing.unit * 3,
-        [theme.breakpoints.up(1100 + theme.spacing.unit * 3 * 2)]: {
-          width: 1100,
-          marginLeft: 'auto',
-          marginRight: 'auto',
-        }
-    }
-  });
 
   render() {
     const { username } = this.state;
