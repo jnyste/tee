@@ -24,7 +24,7 @@ app.get('/api/pullFromGit', function(req, res) {
 app.get('/api/shellPing/*', function(req, res) {
   host = req.url.substring(15);
   ping.sys.probe(host, function(isAlive) {
-      var msg = isAlive ? host +' is alive.' : host + ' is dead.';
+      var msg = {status: isAlive ? 0 : 1};
       res.send(msg);
   });
 });
