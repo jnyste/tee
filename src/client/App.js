@@ -38,8 +38,8 @@ function App(props) {
             <ListItem text="Ping www.google.com"/>
             <ListItem text="Ping www.google.com again"/>
             <ListItem text="Do something else cool"/>
-        </Grid> */}
-      </div>
+  </Grid> */}
+  <main className={classes.content}>
       <Typography paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
@@ -52,6 +52,8 @@ function App(props) {
           arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
           donec massa sapien faucibus et molestie ac.
         </Typography>
+        </main>
+        </div>
     </React.Fragment>
   );
 }
