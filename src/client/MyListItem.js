@@ -20,8 +20,14 @@ class MyListItem extends React.Component {
   
   constructor(props) {
       super(props);
-      this.state = {status: 0}
+      this.state = {status: 0, checked = false}
   }
+
+  handleChange = name => event => {
+      this.setState({
+          [name]: event.target.checked
+      });
+  };
 
   render () {
     return (
@@ -35,7 +41,7 @@ class MyListItem extends React.Component {
   }
 
   renderStatus() {
-    return <p>{this.state.status}</p>
+    return <Checkbox checked={this.state.checked} onChange={this.handleChange('checked')} value="checked"/>
   }
 
 }
