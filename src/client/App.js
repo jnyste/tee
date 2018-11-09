@@ -9,7 +9,7 @@ import CategoryDrawer from './CategoryDrawer.js';
 
 const styles = theme => ({
   layout: {
-    display: flex /*
+    display: "flex" /*
     width: 'auto',
     marginLeft: theme.spacing.unit * 3,
     marginRight: theme.spacing.unit * 3,
