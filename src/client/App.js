@@ -17,9 +17,8 @@ export default class App extends Component {
     return (
       <Grid container justify="center" alignItems="center" direction="column" spacing={16}>
         <ListItem text="Ping www.google.com"/>
-        <ListItem text="Ping www.google.com"/>
-        <ListItem text="Ping www.google.com"/>
-        
+        <ListItem text="."/>
+        <ListItem text="aaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
       </Grid>
     );
   }
