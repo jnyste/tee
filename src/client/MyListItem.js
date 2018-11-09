@@ -21,9 +21,10 @@ class MyListItem extends React.Component {
   constructor(props) {
       super(props);
       this.state = {status: 0, checked: false}
+      this.handleClick = this.handleClick.bind(this);
   }
 
- onClick() {
+ handleClick() {
 
       if (this.state.status != 0) {
           return;
@@ -61,9 +62,9 @@ class MyListItem extends React.Component {
   renderStatus() {
     switch (this.state.status) {
         case 0:
-        return <Checkbox checked={this.state.checked} onClick={this.onClick} value=""/>
+        return <Checkbox checked={this.state.checked} onClick={this.handleClick} value=""/>
         case 2:
-        return <Checkbox checked={this.state.checked} onClick={this.onClick} value="checked"/>
+        return <Checkbox checked={this.state.checked} onClick={this.handleClick} value="checked"/>
         default:
         return <p>broken</p>
     }
