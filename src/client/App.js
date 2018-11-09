@@ -9,6 +9,7 @@ import CategoryDrawer from './CategoryDrawer.js';
 
 const styles = theme => ({
   layout: {
+    display: flex /*
     width: 'auto',
     marginLeft: theme.spacing.unit * 3,
     marginRight: theme.spacing.unit * 3,
@@ -16,7 +17,7 @@ const styles = theme => ({
       width: 1100,
       marginLeft: 'auto',
       marginRight: 'auto',
-    }
+    } */
 }});
 
 function App(props) {
@@ -25,9 +26,9 @@ function App(props) {
   return (
     <React.Fragment>
       <CssBaseline />
+      <div className={classes.layout}>
       <CategoryDrawer />
       <MenuBar/>
-      <div className={classes.layout}>
         <Grid container direction="column" alignItems="stretch" spacing={16}>
             <ListItem text="Ping www.google.com"/>
             <ListItem text="Ping www.google.com again"/>
