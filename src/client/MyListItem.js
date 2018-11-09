@@ -40,8 +40,9 @@ class MyListItem extends React.Component {
     else if (this.state.status == 1)
         return <CircularProgress />
     else
-        return <Checkbox checked="true"/>
+        return <Checkbox checked="false"/>
   }
+
 }
 
 export default withStyles(styles)(MyListItem);
