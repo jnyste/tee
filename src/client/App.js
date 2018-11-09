@@ -15,6 +15,7 @@ export default class App extends Component {
     const { username } = this.state;
     return (
       <div>
+        Moikka
       </div>
     );
   }
