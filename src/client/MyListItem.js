@@ -65,7 +65,7 @@ class MyListItem extends React.Component {
         case 2:
         return <CheckBox onClick={this.handleClick}/>
         default:
-        return <IndeterminateCheckBox onClick={this.handleClick}/>
+        return <p>asd</p>// <IndeterminateCheckBox onClick={this.handleClick}/>
     }
   }
 
