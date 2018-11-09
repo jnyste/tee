@@ -16,7 +16,10 @@ export default class App extends Component {
     const { username } = this.state;
     return (
       <Grid container justify="center" alignItems="center" direction="column" spacing={16}>
-
+        <ListItem text="Ping www.google.com"/>
+        <ListItem text="Ping www.google.com"/>
+        <ListItem text="Ping www.google.com"/>
+        
       </Grid>
     );
   }
