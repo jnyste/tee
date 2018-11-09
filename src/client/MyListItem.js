@@ -14,7 +14,7 @@ const styles = theme => ({
     }
 });
 
-class ListItem extends React.Component {
+class MyListItem extends React.Component {
   
   constructor(props) {
       super(props);
@@ -31,4 +31,4 @@ class ListItem extends React.Component {
   }
 }
 
-export default withStyles(styles)(ListItem);
+export default withStyles(styles)(MyListItem);
