@@ -24,6 +24,10 @@ class MyListItem extends React.Component {
   }
 
   handleChange = name => event => {
+      fetch(this.props.action).then(function(response) {
+          console.log(response.json());
+      });
+      
       this.setState({
           [name]: event.target.checked
       });
