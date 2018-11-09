@@ -1,0 +1,14 @@
+{
+  "title": "Sample IP Troubleshooter",
+  "type": "checklist",
+  "id": "sipt-1",
+  "category": "Networking",
+  "author": "jjas <julius.salonen@visma.com>",
+  "step-1": {
+    "title": "ping google",
+    "type": "step-task",
+    "description": "this shit pings google",
+    "shell": "ping 8.8.8.8",
+    "interactive": true
+  }
+}
