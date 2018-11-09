@@ -12,7 +12,8 @@ import IconButton from '@material-ui/core/IconButton';
 
 const styles = theme => ({
     menubar: {
-        marginLeft: 240
+        width: `calc(100% - 240px)`,
+        marginLeft: 240,
     }
 });
 
@@ -24,12 +25,12 @@ class MenuBar extends React.Component {
 
   render () {
     return (
-        <AppBar position="fixed">
+        <AppBar position="fixed" className={this.props.classes.menubar}>
             <Toolbar color="inherit">
                 <IconButton color="inherit" aria-label="Menu">
                     <MenuIcon />    
                 </IconButton>
-                <Typography variant="h6" color="inherit" className={this.props.classes.menubar}>
+                <Typography variant="h6" color="inherit">
                     Tasks 
                 </Typography>
             </Toolbar>
