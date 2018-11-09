@@ -24,8 +24,11 @@ class MyListItem extends React.Component {
   }
 
   handleChange = name => event => {
+
       fetch(this.props.action).then(function(response) {
-          console.log(response.json());
+          return response.json();
+      }).then(function(myJson) {
+          console.log(myJson["status"]);
       });
 
       this.setState({
