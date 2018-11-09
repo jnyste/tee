@@ -25,7 +25,7 @@ class MenuBar extends React.Component {
 
   render () {
     return (
-        <AppBar className={this.props.classes.menubar}>
+        <AppBar position="static" className={this.props.classes.menubar}>
             <Toolbar color="inherit">
                 <IconButton color="inherit" aria-label="Menu">
                     <MenuIcon />    
