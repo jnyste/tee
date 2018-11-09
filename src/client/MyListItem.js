@@ -35,12 +35,7 @@ class MyListItem extends React.Component {
   }
 
   renderStatus() {
-    if (this.state.status == 0)
-        return <Checkbox checked="false"/>
-    else if (this.state.status == 1)
-        return <CircularProgress />
-    else
-        return <Checkbox checked="false"/>
+    return <p>{this.state.status}</p>
   }
 
 }
