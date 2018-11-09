@@ -10,7 +10,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import CheckBoxOutlineBlank from '@material-ui/icons/CheckBoxOutlineBlank';
 import CheckBox from '@material-ui/icons/CheckBox';
 import IndeterminateCheckBox from '@material-ui/icons/IndeterminateCheckBox';
-
+import TouchRipple from 'material-ui/internal/TouchRipple';
 
 const styles = theme => ({
     root: {
@@ -57,9 +57,11 @@ class MyListItem extends React.Component {
   render () {
     return (
         <Grid item xs={12}>
+            <TouchRipple>
             <Paper onClick={this.handleClick} className={this.state.status == 2 ? this.props.classes.success : this.props.classes.root}>
                 <Typography component="h3" variant="h4">{ this.renderStatus() } {this.props.text}</Typography>
             </Paper>
+            </TouchRipple>
         </Grid>
     );
   }

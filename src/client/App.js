@@ -81,6 +81,7 @@ function App(props) {
         <Grid container direction="column" alignItems="stretch" spacing={16}>
             <MyListItem text="Ping www.google.com" action="/api/shellPing/www.google.com"/>
             <MyListItem text="Ping a fake website that doesn't exist" action="/api/shellPing/www.ajisiajfhuahsufsa.com"/>
+            <MyListItem text="Ping www.google.com again" action="/api/shellPing/www.google.com"/>
         </Grid>
       </main>
     </div>
