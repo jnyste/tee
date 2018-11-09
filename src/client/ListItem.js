@@ -4,25 +4,29 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import { withStyles } from '@material-ui/core/styles';
 
-export default class ListItem extends Component {
-    
-    constructor(props) {
-        super(props);
-        // Status codes: 0 = Not done 1 = Error 2 = Success
-        this.state = { statusCode: 0 }
+const styles = {
+    root: {
+        ...theme.mixins.gutters(),
+        paddingTop: theme.spacing.unit * 2,
+        paddingBottom: theme.spacing.unit * 2,
     }
-
-    renderStatus() {
-    
-    }
-    
-    render() {
-        return (
-            <Grid item xs={12}>
-                <Paper>
-                    <Typography component="h3" variant="h3">{this.props.text}</Typography>
-                </Paper>
-            </Grid>
-            )};
 };
+
+class ListItem extends React.Component {
+  constructor(props) {
+      super(props);
+  }
+  render () {
+    return (
+        <Grid item xs={12}>
+            <Paper>
+                <Typography component="h3" variant="h3">{this.props.text}</Typography>
+            </Paper>
+        </Grid>
+    );
+  }
+}
+
+export default withStyles(styles)(ListItem);
