@@ -2,6 +2,7 @@ const express = require('express');
 const os = require('os');
 const shell = require('shelljs');
 const app = express();
+const ping = require('ping');
 
 app.use(express.static('dist'));
 app.get('/api/getUsername', (req, res) => res.send({ username: os.userInfo().username }));
@@ -19,4 +20,13 @@ app.get('/api/pullFromGit', function(req, res) {
       break;
   }
 });
+
+app.get('/api/shellPing/*', function(req, res) {
+  host = req.url.substring(11);
+  ping.sys.probe(host, function(isAlive) {
+      var msg = isAlive ? host +' is alive.' : host + ' is dead.';
+      res.send(msg);
+  });
+});
+
 app.listen(8080, () => console.log('Listening on port 8080!'));
