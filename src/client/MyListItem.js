@@ -24,7 +24,7 @@ class MyListItem extends React.Component {
       this.handleClick = this.handleClick.bind(this);
   }
 
- handleClick() {
+ handleClick = () => {
 
       if (this.state.status != 0) {
           return;
