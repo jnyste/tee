@@ -41,7 +41,7 @@ class MyListItem extends React.Component {
           return;
       }
 
-      this.setState(state => {
+      this.setState({
           status: 1
       });
     
