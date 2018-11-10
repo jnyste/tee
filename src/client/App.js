@@ -17,7 +17,6 @@ import BuildIcon from '@material-ui/icons/Build';
 import MyListItem from './MyListItem.js'
 import Grid from '@material-ui/core/Grid';
 import Checkbox from '@material-ui/core/Checkbox';
-import TouchRipple from 'material-ui/internal/TouchRipple';
 
 const drawerWidth = 240;
 
