@@ -128,6 +128,19 @@ class App extends React.Component {
         this.setState({checkList: idx});
     }
 
+    getCategory(idx) {
+        switch (idx) {
+            case 1:
+                return "Network"
+            case 2:
+                return "Git"
+            case 3:
+                return "Shell"
+            case 4:
+                return "Checklist 4"
+        }
+    }
+
     render() {
         return (
             <div className={this.props.classes.root}>
@@ -135,7 +148,7 @@ class App extends React.Component {
             <AppBar position="fixed" className={this.props.classes.appBar}>
                 <Toolbar>
                     <Typography variant="h6" color="inherit" noWrap>
-                    Tasks
+                    {getCategory(this.state.checkList)}
                     </Typography>
                 </Toolbar>
                 </AppBar>
