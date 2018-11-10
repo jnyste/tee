@@ -76,7 +76,7 @@ class MyListItem extends React.Component {
         case 0:
         return <CheckBoxOutlineBlank onClick={this.handleClick}/>
         case 1:
-        return <CircularProgress size={40} />
+        return <CircularProgress size={30} />
         case 2:
         return <CheckBox style={{color: 'green'}} onClick={this.handleClick}/>
         default:
