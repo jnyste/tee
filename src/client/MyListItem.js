@@ -68,13 +68,24 @@ class MyListItem extends React.Component {
     return (
         //><ButtonBase>
         <Grid item xs={12}>
-            <Paper onClick={this.handleClick} className={this.state.status == 2 ? this.props.classes.success : this.props.classes.root}>
+            <Paper onClick={this.handleClick} className={this.getClass(this.state.status)}>
                 <Typography component="h3" variant="h4">{ this.renderStatus() } {this.props.text}</Typography>
                 <Typography variant="subtitle1" gutterBottom>{ this.props.description}  <Typography variant="subtitle2" gutterBottom>{this.props.action} </Typography> </Typography>
             </Paper>
         </Grid>
         //</ButtonBase>
     );
+  }
+
+  getClass(status) {
+        if (status == 0)
+            return this.props.classes.root;
+        else if (status == 1)
+            return this.props.classes.root;
+        else if (status == 2)
+            return this.props.classes.success;
+        else if (status == -1)
+            return this.props.classes.failure;
   }
 
   renderStatus() {

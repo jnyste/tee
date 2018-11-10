@@ -149,7 +149,7 @@ class App extends React.Component {
         return (
             <div className={this.props.classes.root}>
                 <CssBaseline />
-            <AppBar position="fixed" className={this.props.classes.appBar}>
+            <AppBar position="fixed" className={this.props.classes.appBar} style={{backgroundColor: '#1b2d18'}}>
                 <Toolbar>
                     <Typography variant="h6" color="inherit" noWrap>
                     Tasks
