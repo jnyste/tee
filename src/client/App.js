@@ -169,27 +169,26 @@ class App extends React.Component {
             <main className={this.props.classes.content}>
             <div className={this.props.classes.toolbar} />
             <Grid container direction="column" alignItems="stretch" spacing={16}>
-                    {this.state.checkList1Tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> })}
-                    {this.renderItems(this.state.checkList)}
+                    {this.renderItems()}
             </Grid>
             </main>
         </div>
         );
     }
 
-    renderItems(checkList) {
-        switch (checkList) {
+    renderItems() {
+        switch (this.state.checkList) {
             case 1:
                 return this.state.checkList1Tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> });
                 break;
             case 2:
-                this.state.checkList2Tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> });
+                return this.state.checkList2Tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> });
                 break;
             case 3:
-                this.state.checkList3Tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> });
+                return this.state.checkList3Tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> });
                 break;
             case 4:
-                this.state.checkList4Tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> });
+                return this.state.checkList4Tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> });
                 break;
             default:
                 return <p>broked</p>
