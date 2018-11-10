@@ -73,7 +73,7 @@ function App(props) {
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" color="inherit" noWrap>
-            Checklists
+            Tasks
           </Typography>
         </Toolbar>
       </AppBar>
@@ -88,7 +88,7 @@ function App(props) {
         <div className={classes.toolbar} />
         <Divider />
         <List>
-          {['Category 1', 'Category 2', 'Category 3', 'Category 4'].map((text, index) => (
+          {['Checklist 1', 'Checklist 2', 'Checklist 3', 'Checklist 4'].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon><BuildIcon/></ListItemIcon>
               <ListItemText primary={text} />
