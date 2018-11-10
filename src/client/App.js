@@ -169,10 +169,7 @@ class App extends React.Component {
             }}
             anchor="left"
             >
-            <div className={this.props.classes.toolbar} />
-                <ListItem key="Tee">
-                    <ListItemText primary="Tee" />
-                </ListItem>
+            <div className={this.props.classes.toolbar} />  
             <Divider />
             <List>
                 {['Checklist 1', 'Checklist 2', 'Checklist 3', 'Checklist 4'].map((text, index) => (
