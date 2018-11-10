@@ -135,7 +135,7 @@ class App extends React.Component {
                 ]
             },
             checkList4Tasks: {
-            
+                "steps": []
             },
         }
     }
