@@ -23,13 +23,13 @@ const styles = theme => ({
         paddingTop: theme.spacing.unit * 2,
         paddingBottom: theme.spacing.unit * 2,
         paddingLeft: theme.spacing.unit * 2,
-        background: 'linear-gradient(30deg, #97c16b 80.5%, #6E836A 80.5%)'
+        background: 'linear-gradient(30deg, #97c16b 75%, #6E836A 75%)'
     },
   failure: {
     paddingTop: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit * 2,
     paddingLeft: theme.spacing.unit * 2,
-    background: 'linear-gradient(30deg, #C16B6B 80.5%, #836a6a 80.5%)'
+    background: 'linear-gradient(-30deg, #C16B6B 85%, #b46a6a 85%)'
   }
 });
 
