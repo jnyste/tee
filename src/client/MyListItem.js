@@ -71,6 +71,17 @@ class MyListItem extends React.Component {
     );
   }
 
+  getClass(status) {
+        if (status == 0)
+            return this.props.classes.root;
+        else if (status == 1)
+            return this.props.classes.root;
+        else if (status == 2)
+            return this.props.classes.success;
+        else if (status == -1)
+            return this.props.classes.failure;
+  }
+
   renderStatus() {
     switch (this.state.status) {
         case 0:
