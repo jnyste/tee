@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
@@ -15,6 +16,21 @@ import BuildIcon from '@material-ui/icons/Build';
 import MyListItem from './MyListItem.js'
 import Grid from '@material-ui/core/Grid';
 import Checkbox from '@material-ui/core/Checkbox';
+
+const theme = createMuiTheme({
+  palette: {
+    type: "dark",
+    primary: {
+      main: "#43563f"
+    },
+    secondary: {
+      main: "#97c16b"
+    },
+    background: {
+      default: "#101010"
+    }
+  }
+});
 
 const styles = theme => ({
     root: {
@@ -37,17 +53,6 @@ const styles = theme => ({
       backgroundColor: theme.palette.background.default,
       padding: theme.spacing.unit * 3,
     },
-  palette: {
-    primary: {
-      main: "#43563f"
-    },
-    secondary: {
-      main: "#97c16b"
-    },
-    background: {
-      default: "#101010"
-    }
-  },
 });
 
 const drawerWidth = 240;
