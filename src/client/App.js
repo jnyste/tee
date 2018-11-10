@@ -118,16 +118,16 @@ class App extends React.Component {
                 "category": "Networking",
                 "author": "jjas <julius.salonen@visma.com>",
                 "steps": [
-                    {"title": "Ping Google",
-                        "type": "step-task",
-                        "description": "this shit pings google",
-                        "shell": "/api/shellPing/www.google.com",
+                    {"title": "Run Hello World -script",
+                        "type": "step-1task",
+                        "description": "Should print Hello World to console.",
+                        "shell": "/api/shellScript/testScript.sh",
                        "interactive": true},
                      
-                     {"title": "Ping a fake website",
+                     {"title": "Run longer script",
                       "type": "manual-task",
-                      "description": "yeah do this thing",
-                      "shell": "/api/shellPing/www.iajsdiaisdasfhasuf.com",
+                      "description": "Run a script that prints more output to the console.",
+                      "shell": "/api/shellScript/testScript2.sh",
                       "interactive": false
                      }
                 ]
