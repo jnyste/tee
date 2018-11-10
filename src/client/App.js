@@ -33,9 +33,7 @@ const theme = createMuiTheme({
 });
 
 const styles = theme => createMuiTheme({
-    root: {
-      display: 'flex',
-      palette: {
+    palette: {
         type: "dark",
         primary: {
           main: "#43563f"
@@ -47,6 +45,8 @@ const styles = theme => createMuiTheme({
           default: "#101010"
         }
       },
+    root: {
+      display: 'flex',
     },
     appBar: {
       width: `calc(100% - ${drawerWidth}px)`,
