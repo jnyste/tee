@@ -105,8 +105,8 @@ class App extends React.Component {
                 "category": "Networking",
                 "author": "jjas <julius.salonen@visma.com>",
                 "steps": [
-                     {"title": "Pull this app from git",
-                      "description": "Pull this app from git and reload it.",
+                     {"title": "Pull this app from GitHub",
+                      "description": "Pull this app from Git and reload it.",
                       "shell": "/api/pullFromGit",
                       "interactive": true}
                 ]
