@@ -93,18 +93,6 @@ class App extends React.Component {
                 "category": "Networking",
                 "author": "jjas <julius.salonen@visma.com>",
                 "steps": [
-                    {"title": "Ping Google",
-                        "type": "step-task",
-                        "description": "thifweweewfs shit pings google",
-                        "shell": "/api/shellPing/www.google.com",
-                       "interactive": true},
-                     
-                     {"title": "Ping a fake website",
-                      "type": "manual-task",
-                      "description": "yeah do this thing",
-                      "shell": "/api/shellPing/www.iajsdiaisdasfhasuf.com",
-                      "interactive": false
-                     },
                      {"title": "Pull this app from git",
                       "description": "dajnodjnof",
                       "shell": "/api/pullFromGit",
