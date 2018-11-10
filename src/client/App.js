@@ -17,6 +17,7 @@ import BuildIcon from '@material-ui/icons/Build';
 import MyListItem from './MyListItem.js'
 import Grid from '@material-ui/core/Grid';
 import Checkbox from '@material-ui/core/Checkbox';
+import TouchRipple from 'material-ui/internal/TouchRipple';
 
 const drawerWidth = 240;
 
@@ -82,6 +83,22 @@ function App(props) {
             <MyListItem text="Ping www.google.com" action="/api/shellPing/www.google.com"/>
             <MyListItem text="Ping a fake website that doesn't exist" action="/api/shellPing/www.ajisiajfhuahsufsa.com"/>
             <MyListItem text="Ping www.google.com again" action="/api/shellPing/www.google.com"/>
+            {[
+	  {"title": "ping google",
+   	   "type": "step-task",
+   	   "description": "this shit pings google",
+   	   "shell": "ping 8.8.8.8",
+  	   "interactive": true},
+	   
+	   {"title": "do something",
+	    "type": "manual-task",
+	    "description": "yeah do this thing",
+	    "shell": "",
+	    "interactive": false
+	   }
+  ].map((task) => {
+      <MyListItem text={task.title} action={task.shell}/>
+  })}
         </Grid>
       </main>
     </div>

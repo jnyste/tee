@@ -4,11 +4,18 @@
   "id": "sipt-1",
   "category": "Networking",
   "author": "jjas <julius.salonen@visma.com>",
-  "step-1": {
-    "title": "ping google",
-    "type": "step-task",
-    "description": "this shit pings google",
-    "shell": "ping 8.8.8.8",
-    "interactive": true
-  }
+  "steps": [
+	  {"title": "ping google",
+   	   "type": "step-task",
+   	   "description": "this shit pings google",
+   	   "shell": "ping 8.8.8.8",
+  	   "interactive": true},
+	   
+	   {"title": "do something",
+	    "type": "manual-task",
+	    "description": "yeah do this thing",
+	    "shell": "",
+	    "interactive": false
+	   }
+  ]
 }
