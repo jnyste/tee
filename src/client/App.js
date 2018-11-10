@@ -19,6 +19,27 @@ import Grid from '@material-ui/core/Grid';
 import Checkbox from '@material-ui/core/Checkbox';
 
 const drawerWidth = 240;
+const listOfTasks = {
+    "title": "Sample IP Troubleshooter",
+    "type": "checklist",
+    "id": "sipt-1",
+    "category": "Networking",
+    "author": "jjas <julius.salonen@visma.com>",
+    "steps": [
+        {"title": "ping google",
+            "type": "step-task",
+            "description": "this shit pings google",
+            "shell": "ping 8.8.8.8",
+           "interactive": true},
+         
+         {"title": "do something",
+          "type": "manual-task",
+          "description": "yeah do this thing",
+          "shell": "",
+          "interactive": false
+         }
+    ]
+  }  
 
 const styles = theme => ({
   root: {
@@ -79,10 +100,7 @@ function App(props) {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Grid container direction="column" alignItems="stretch" spacing={16}>
-            <MyListItem text="Ping www.google.com" action="/api/shellPing/www.google.com"/>
-            <MyListItem text="Ping a fake website that doesn't exist" action="/api/shellPing/www.ajisiajfhuahsufsa.com"/>
-            <MyListItem text="Ping www.google.com again" action="/api/shellPing/www.google.com"/>
-            {[ {"title": "ping google", "type": "step-task", "description": "this shit pings google", "shell": "ping 8.8.8.8", "interactive": true} ].map((task, index) => {return <MyListItem text={task.title} action={task.shell}/> })}
+             {listOfTasks.map((task, index) => {return <MyListItem text={task.title} action={task.shell}/> })}
         </Grid>
       </main>
     </div>
