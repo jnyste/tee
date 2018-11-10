@@ -174,6 +174,7 @@ class App extends React.Component {
             anchor="left"
             >
             <div className={this.props.classes.toolbar} />  
+            <img src="tee.png"/>
             <Divider />
             <List>
                 {['Network', 'Git', 'Checklist 3', 'Checklist 4'].map((text, index) => (
