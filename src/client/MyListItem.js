@@ -23,7 +23,7 @@ const styles = theme => ({
         paddingTop: theme.spacing.unit * 2,
         paddingBottom: theme.spacing.unit * 2,
         paddingLeft: theme.spacing.unit * 2,
-        background: 'linear-gradient(30deg, #6e836 30%, #97c16b 90%)'
+        background: 'linear-gradient(30deg, #97c16b 90%, #6E836A 30%)'
     }
 });
 
