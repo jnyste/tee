@@ -51,6 +51,9 @@ class MyListItem extends React.Component {
         } else {
             this.setState({ status: -1});
         }
+        if (json["out"] != undefined) {
+            console.log(json["out"]);
+        }
       });
 
   };
@@ -61,7 +64,7 @@ class MyListItem extends React.Component {
         <Grid item xs={12}>
             <Paper onClick={this.handleClick} className={this.state.status == 2 ? this.props.classes.success : this.props.classes.root}>
                 <Typography component="h3" variant="h4">{ this.renderStatus() } {this.props.text}</Typography>
-                <Typography variant="subtitle1" gutterBottom>{ this.props.description}  <Typography variant="subtitle2" gutterBottom>{ this.props.action} </Typography> </Typography>
+                <Typography variant="subtitle1" gutterBottom>{ this.props.description}  <Typography variant="subtitle2" gutterBottom>{this.props.action} </Typography> </Typography>
             </Paper>
         </Grid>
         //</ButtonBase>
