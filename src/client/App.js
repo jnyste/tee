@@ -100,7 +100,7 @@ function App(props) {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Grid container direction="column" alignItems="stretch" spacing={16}>
-             {listOfTasks.map((task, index) => {return <MyListItem text={task.title} action={task.shell}/> })}
+             {listOfTasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell}/> })}
         </Grid>
       </main>
     </div>
