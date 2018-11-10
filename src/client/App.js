@@ -125,7 +125,6 @@ class App extends React.Component {
     }
 
     handleChecklistClick(idx) {
-        console.log(idx);
         this.setState({checkList: idx});
     }
 
@@ -133,7 +132,7 @@ class App extends React.Component {
         return (
             <div className={this.props.classes.root}>
                 <CssBaseline />
-            <AppBar position="fixed" className={this.props.classes.appBar} style={{backgroundColor: '#1b2d18'}}>
+            <AppBar position="fixed" className={this.props.classes.appBar}>
                 <Toolbar>
                     <Typography variant="h6" color="inherit" noWrap>
                     Tasks
