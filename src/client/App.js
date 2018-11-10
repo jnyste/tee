@@ -169,7 +169,7 @@ class App extends React.Component {
             <main className={this.props.classes.content}>
             <div className={this.props.classes.toolbar} />
             <Grid container direction="column" alignItems="stretch" spacing={16}>
-                    {renderItems()}
+                    {this.renderItems()}
             </Grid>
             </main>
         </div>
