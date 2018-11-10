@@ -158,9 +158,8 @@ class App extends React.Component {
         return (
         <div className={this.props.classes.root}>
             <CssBaseline />
-            <AppBar position="fixed" className={this.props.classes.appBar}>
+        <AppBar title={<img src="public/tee.png"/>} position="fixed" className={this.props.classes.appBar}>
             <Toolbar>
-            <img src="public/tee.png"/>
                 <Typography variant="h6" color="inherit" noWrap>
                 Tasks
                 </Typography>
