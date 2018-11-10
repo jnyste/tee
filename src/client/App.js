@@ -85,7 +85,7 @@ class App extends React.Component {
                 ]
             },
             checkList2Tasks: {
-                "title": "Sample IP Troubleshooter",
+                "title": "Git-update the app",
                 "type": "checklist",
                 "id": "sipt-1",
                 "category": "Networking",
@@ -98,7 +98,7 @@ class App extends React.Component {
                 ]
             },
             checkList3Tasks: {
-                "title": "Sample IP Troubleshooter",
+                "title": "Shell script runners",
                 "type": "checklist",
                 "id": "sipt-1",
                 "category": "Networking",
@@ -119,7 +119,45 @@ class App extends React.Component {
                 ]
             },
             checkList4Tasks: {
-                "steps": []
+              "title": "Lots of items here",
+              "type": "checklist",
+                "steps": [
+                  {"title": "Run Hello World -script",
+                    "type": "step-1task",
+                    "description": "Should print Hello World to console.",
+                    "shell": "/api/shellScript/testScript.sh",
+                    "interactive": true},
+                  {"title": "Run Hello World -script",
+                    "type": "step-1task",
+                    "description": "Should print Hello World to console.",
+                    "shell": "/api/shellScript/testScript.sh",
+                    "interactive": true},
+                  {"title": "Run Hello World -script",
+                    "type": "step-1task",
+                    "description": "Should print Hello World to console.",
+                    "shell": "/api/shellScript/testScript.sh",
+                    "interactive": true},
+                  {"title": "Run Hello World -script",
+                    "type": "step-1task",
+                    "description": "Should print Hello World to console.",
+                    "shell": "/api/shellScript/testScript.sh",
+                    "interactive": true},
+                  {"title": "Run Hello World -script",
+                    "type": "step-1task",
+                    "description": "Should print Hello World to console.",
+                    "shell": "/api/shellScript/testScript.sh",
+                    "interactive": true},
+                  {"title": "Run Hello World -script",
+                    "type": "step-1task",
+                    "description": "Should print Hello World to console.",
+                    "shell": "/api/shellScript/testScript.sh",
+                    "interactive": true},
+                  {"title": "Run Hello World -script",
+                    "type": "step-1task",
+                    "description": "Should print Hello World to console.",
+                    "shell": "/api/shellScript/testScript.sh",
+                    "interactive": true},
+                ]
             },
         }
     }
