@@ -104,7 +104,11 @@ class App extends React.Component {
                       "description": "yeah do this thing",
                       "shell": "/api/shellPing/www.iajsdiaisdasfhasuf.com",
                       "interactive": false
-                     }
+                     },
+                     {"title": "Pull this app from git",
+                      "description": "dajnodjnof",
+                      "shell": "/api/pullFromGit",
+                      "interactive": true}
                 ]
             },
             checkList3Tasks: {

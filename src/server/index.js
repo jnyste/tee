@@ -11,12 +11,12 @@ app.get('/api/pullFromGit', function(req, res) {
   let output = pull.stdout;
   switch (code = shell.exec('git pull').code) {
     case 0:
-      res.send(output);
+      res.send({status: code, out: output});
       break;
     case 1:
     case 2:
     default:
-      res.send(output);
+      res.send({status: -1, code: output});
       break;
   }
 });
