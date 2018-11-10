@@ -145,7 +145,6 @@ class App extends React.Component {
 
     render() {
         return (
-        <MuiThemeProvider theme={styles}>
             <div className={this.props.classes.root}>
                 <CssBaseline />
             <AppBar position="fixed" className={this.props.classes.appBar}>
@@ -183,7 +182,6 @@ class App extends React.Component {
                 </Grid>
                 </main>
             </div>
-        </MuiThemeProvider>
         );
     }
 
