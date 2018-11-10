@@ -173,7 +173,7 @@ class App extends React.Component {
             }}
             anchor="left"
             >
-            <img src="public/tee.png" height="25" width="25"/>
+            <img src="public/tee.png" height="50" width="100" style="padding-top: 10px"/>
             <div className={this.props.classes.toolbar} />  
             <Divider />
             <List>
