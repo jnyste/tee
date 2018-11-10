@@ -61,6 +61,7 @@ class App extends React.Component {
         super(props);
         this.handleChecklistClick = this.handleChecklistClick.bind(this);
         this.renderItems = this.renderItems.bind(this);
+        this.getCategory = this.getCategory.bind(this);
         this.state = {
             checkList: 1,   
             checkList1Tasks: {
@@ -186,7 +187,7 @@ class App extends React.Component {
             <AppBar position="fixed" className={this.props.classes.appBar}>
                 <Toolbar>
                     <Typography variant="h6" color="inherit" noWrap>
-                    {getCategory(this.state.checkList)}
+                    {this.getCategory(this.state.checkList)}
                     </Typography>
                 </Toolbar>
                 </AppBar>
