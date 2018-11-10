@@ -34,7 +34,7 @@ const theme = createMuiTheme({
   }
 });
 
-const styles = theme => createMuiTheme({
+const styles = theme => ({
     palette: {
         type: "dark",
         primary: {
