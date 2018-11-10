@@ -52,13 +52,13 @@ function App(props) {
     "category": "Networking",
     "author": "jjas <julius.salonen@visma.com>",
     "steps": [
-        {"title": "ping google",
+        {"title": "Ping Google",
             "type": "step-task",
             "description": "this shit pings google",
             "shell": "/api/shellPing/www.google.com",
            "interactive": true},
          
-         {"title": "ping fake website",
+         {"title": "Ping a fake website",
           "type": "manual-task",
           "description": "yeah do this thing",
           "shell": "/api/shellPing/www.iajsdiaisdasfhasuf.com",
