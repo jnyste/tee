@@ -18,5 +18,5 @@ This will automatically provision the machine, run shell scripts to install node
 Please contact before touching anything. See LICENSE for the MIT license.
 
 ## Authors
-- aggums
+- Jan-Sebastian Nystedt
 - fippe / J. Salonen
