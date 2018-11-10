@@ -39,7 +39,7 @@ const listOfTasks = {
           "interactive": false
          }
     ]
-  }  
+  };
 
 const styles = theme => ({
   root: {
