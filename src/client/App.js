@@ -170,7 +170,6 @@ class App extends React.Component {
             anchor="left"
             >
             <div className={this.props.classes.toolbar} />
-            <Typography variant="h4">Tee</Typography>
             <Divider />
             <List>
                 {['Checklist 1', 'Checklist 2', 'Checklist 3', 'Checklist 4'].map((text, index) => (
