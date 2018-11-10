@@ -70,6 +70,5 @@ Vagrant.configure("2") do |config|
     cd /opt/tee
     chown vagrant:vagrant -R .
     npm install
-    npm run dev
   SHELL
 end
