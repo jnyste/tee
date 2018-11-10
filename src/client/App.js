@@ -169,7 +169,7 @@ class App extends React.Component {
             <main className={this.props.classes.content}>
             <div className={this.props.classes.toolbar} />
             <Grid container direction="column" alignItems="stretch" spacing={16}>
-                    {this.renderItems(this.state.checkList)}
+                    {this.state.checkList1Tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> })}
             </Grid>
             </main>
         </div>
@@ -179,7 +179,7 @@ class App extends React.Component {
     renderItems(checkList) {
         switch (checkList) {
             case 1:
-                this.state.checkList1Tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> });
+                
                 break;
             case 2:
                 this.state.checkList2Tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> });
