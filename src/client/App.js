@@ -18,97 +18,100 @@ import MyListItem from './MyListItem.js'
 import Grid from '@material-ui/core/Grid';
 import Checkbox from '@material-ui/core/Checkbox';
 
-const drawerWidth = 240;
-
 const styles = theme => ({
-  root: {
-    display: 'flex',
-  },
-  appBar: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: drawerWidth,
-  },
-  drawer: {
-    width: drawerWidth,
-    flexShrink: 0,
-  },
-  drawerPaper: {
-    width: drawerWidth,
-  },
-  toolbar: theme.mixins.toolbar,
-  content: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
-    padding: theme.spacing.unit * 3,
-  },
+    root: {
+      display: 'flex',
+    },
+    appBar: {
+      width: `calc(100% - ${drawerWidth}px)`,
+      marginLeft: drawerWidth,
+    },
+    drawer: {
+      width: drawerWidth,
+      flexShrink: 0,
+    },
+    drawerPaper: {
+      width: drawerWidth,
+    },
+    toolbar: theme.mixins.toolbar,
+    content: {
+      flexGrow: 1,
+      backgroundColor: theme.palette.background.default,
+      padding: theme.spacing.unit * 3,
+    },
 });
 
-function App(props) {
-  const { classes } = props;
-  const listOfTasks = {
-    "title": "Sample IP Troubleshooter",
-    "type": "checklist",
-    "id": "sipt-1",
-    "category": "Networking",
-    "author": "jjas <julius.salonen@visma.com>",
-    "steps": [
-        {"title": "Ping Google",
-            "type": "step-task",
-            "description": "this shit pings google",
-            "shell": "/api/shellPing/www.google.com",
-           "interactive": true},
-         
-         {"title": "Ping a fake website",
-          "type": "manual-task",
-          "description": "yeah do this thing",
-          "shell": "/api/shellPing/www.iajsdiaisdasfhasuf.com",
-          "interactive": false
-         }
-    ]
-  };
+const drawerWidth = 240;
 
-  return (
-    <div className={classes.root}>
-      <CssBaseline />
-      <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar>
-          <Typography variant="h6" color="inherit" noWrap>
-            Tasks
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <Drawer
-        className={classes.drawer}
-        variant="permanent"
-        classes={{
-          paper: classes.drawerPaper,
-        }}
-        anchor="left"
-      >
-        <div className={classes.toolbar} />
-        <Divider />
-        <List>
-          {['Checklist 1', 'Checklist 2', 'Checklist 3', 'Checklist 4'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon><BuildIcon/></ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-      </Drawer>
-      <main className={classes.content}>
-        <div className={classes.toolbar} />
-        <Grid container direction="column" alignItems="stretch" spacing={16}>
-             {listOfTasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> })}
-        </Grid>
-      </main>
-    </div>
-  );
+class App extends React.Component {
+
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+
+        const listOfTasks = {
+            "title": "Sample IP Troubleshooter",
+            "type": "checklist",
+            "id": "sipt-1",
+            "category": "Networking",
+            "author": "jjas <julius.salonen@visma.com>",
+            "steps": [
+                {"title": "Ping Google",
+                    "type": "step-task",
+                    "description": "this shit pings google",
+                    "shell": "/api/shellPing/www.google.com",
+                   "interactive": true},
+                 
+                 {"title": "Ping a fake website",
+                  "type": "manual-task",
+                  "description": "yeah do this thing",
+                  "shell": "/api/shellPing/www.iajsdiaisdasfhasuf.com",
+                  "interactive": false
+                 }
+            ]
+          };
+
+        return (
+        <div className={this.props.classes.root}>
+            <CssBaseline />
+            <AppBar position="fixed" className={this.props.classes.appBar}>
+            <Toolbar>
+                <Typography variant="h6" color="inherit" noWrap>
+                Tasks
+                </Typography>
+            </Toolbar>
+            </AppBar>
+            <Drawer
+            className={this.props.classes.drawer}
+            variant="permanent"
+            classes={{
+                paper: this.props.classes.drawerPaper,
+            }}
+            anchor="left"
+            >
+            <div className={this.props.classes.toolbar} />
+            <Divider />
+            <List>
+                {['Checklist 1', 'Checklist 2', 'Checklist 3', 'Checklist 4'].map((text, index) => (
+                <ListItem button key={text}>
+                    <ListItemIcon><BuildIcon/></ListItemIcon>
+                    <ListItemText primary={text} />
+                </ListItem>
+                ))}
+            </List>
+            <Divider />
+            </Drawer>
+            <main className={this.props.classes.content}>
+            <div className={this.props.classes.toolbar} />
+            <Grid container direction="column" alignItems="stretch" spacing={16}>
+                    {listOfTasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> })}
+            </Grid>
+            </main>
+        </div>
+        );
+    }
 }
-
-App.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
 
 export default withStyles(styles)(App);
