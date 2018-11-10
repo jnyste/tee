@@ -47,32 +47,32 @@ class App extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            tasks: {
+                "title": "Sample IP Troubleshooter",
+                "type": "checklist",
+                "id": "sipt-1",
+                "category": "Networking",
+                "author": "jjas <julius.salonen@visma.com>",
+                "steps": [
+                    {"title": "Ping Google",
+                        "type": "step-task",
+                        "description": "this shit pings google",
+                        "shell": "/api/shellPing/www.google.com",
+                       "interactive": true},
+                     
+                     {"title": "Ping a fake website",
+                      "type": "manual-task",
+                      "description": "yeah do this thing",
+                      "shell": "/api/shellPing/www.iajsdiaisdasfhasuf.com",
+                      "interactive": false
+                     }
+                ]
+              }
+        }
     }
 
     render() {
-
-        const listOfTasks = {
-            "title": "Sample IP Troubleshooter",
-            "type": "checklist",
-            "id": "sipt-1",
-            "category": "Networking",
-            "author": "jjas <julius.salonen@visma.com>",
-            "steps": [
-                {"title": "Ping Google",
-                    "type": "step-task",
-                    "description": "this shit pings google",
-                    "shell": "/api/shellPing/www.google.com",
-                   "interactive": true},
-                 
-                 {"title": "Ping a fake website",
-                  "type": "manual-task",
-                  "description": "yeah do this thing",
-                  "shell": "/api/shellPing/www.iajsdiaisdasfhasuf.com",
-                  "interactive": false
-                 }
-            ]
-          };
-
         return (
         <div className={this.props.classes.root}>
             <CssBaseline />
@@ -106,7 +106,7 @@ class App extends React.Component {
             <main className={this.props.classes.content}>
             <div className={this.props.classes.toolbar} />
             <Grid container direction="column" alignItems="stretch" spacing={16}>
-                    {listOfTasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> })}
+                    {this.state.tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> })}
             </Grid>
             </main>
         </div>
