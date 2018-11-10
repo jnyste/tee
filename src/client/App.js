@@ -61,6 +61,7 @@ class App extends React.Component {
         super(props);
         this.handleChecklistClick = this.handleChecklistClick.bind(this);
         this.renderItems = this.renderItems.bind(this);
+        this.getCategory = this.getCategory.bind(this);
         this.state = {
             checkList: 1,   
             checkList1Tasks: {
@@ -166,14 +167,27 @@ class App extends React.Component {
         this.setState({checkList: idx});
     }
 
+    getCategory(idx) {
+        switch (idx) {
+            case 1:
+                return "Network"
+            case 2:
+                return "Git"
+            case 3:
+                return "Shell"
+            case 4:
+                return "Checklist 4"
+        }
+    }
+
     render() {
         return (
             <div className={this.props.classes.root}>
                 <CssBaseline />
-            <AppBar position="fixed" className={this.props.classes.appBar}>
+            <AppBar position="fixed" className={this.props.classes.appBar} style={{backgroundColor: '#424242'}}>
                 <Toolbar>
                     <Typography variant="h6" color="inherit" noWrap>
-                    Tasks
+                    {this.getCategory(this.state.checkList)}
                     </Typography>
                 </Toolbar>
                 </AppBar>
