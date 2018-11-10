@@ -61,6 +61,7 @@ class MyListItem extends React.Component {
         <Grid item xs={12}>
             <Paper onClick={this.handleClick} className={this.state.status == 2 ? this.props.classes.success : this.props.classes.root}>
                 <Typography component="h3" variant="h4">{ this.renderStatus() } {this.props.text}</Typography>
+                <Typography component="h5" variant="h5">{ this.props.description} </Typography>
             </Paper>
         </Grid>
         //</ButtonBase>
