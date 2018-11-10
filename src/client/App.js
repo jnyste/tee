@@ -70,12 +70,69 @@ class App extends React.Component {
                       "interactive": false
                      }
                 ]
-            }
+            },
+            checkList2Tasks: {
+                "title": "Sample IP Troubleshooter",
+                "type": "checklist",
+                "id": "sipt-1",
+                "category": "Networking",
+                "author": "jjas <julius.salonen@visma.com>",
+                "steps": [
+                    {"title": "Ping Google",
+                        "type": "step-task",
+                        "description": "thifweweewfs shit pings google",
+                        "shell": "/api/shellPing/www.google.com",
+                       "interactive": true},
+                     
+                     {"title": "Ping a fake website",
+                      "type": "manual-task",
+                      "description": "yeah do this thing",
+                      "shell": "/api/shellPing/www.iajsdiaisdasfhasuf.com",
+                      "interactive": false
+                     }
+                ]
+            },
+            checkList3Tasks: {
+                "title": "Sample IP Troubleshooter",
+                "type": "checklist",
+                "id": "sipt-1",
+                "category": "Networking",
+                "author": "jjas <julius.salonen@visma.com>",
+                "steps": [
+                    {"title": "Ping Google",
+                        "type": "step-task",
+                        "description": "this shit pings google",
+                        "shell": "/api/shellPing/www.google.com",
+                       "interactive": true},
+                     
+                     {"title": "Ping a fake website",
+                      "type": "manual-task",
+                      "description": "yeah do this thing",
+                      "shell": "/api/shellPing/www.iajsdiaisdasfhasuf.com",
+                      "interactive": false
+                     }
+                ]
+            },
+            checkList4Tasks: {
+                "title": "Sample IP Troubleshooter",
+                "type": "checklist",
+                "id": "sipt-1",
+                "category": "Networking",
+                "author": "jjas <julius.salonen@visma.com>",
+                "steps": [
+                    {"title": "Ping Google",
+                        "type": "step-task",
+                        "description": "this shit pings google",
+                        "shell": "/api/shellPing/www.google.com",
+                       "interactive": true},
+                ]
+            },
         }
     }
 
     handleChecklistClick(idx) {
         console.log(idx);
+        this.setState({checkList: idx});
     }
 
     render() {
@@ -112,11 +169,31 @@ class App extends React.Component {
             <main className={this.props.classes.content}>
             <div className={this.props.classes.toolbar} />
             <Grid container direction="column" alignItems="stretch" spacing={16}>
-                    {this.state.checkList1Tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> })}
+                    {renderItems()}
             </Grid>
             </main>
         </div>
         );
+    }
+
+    renderItems() {
+        switch (this.state.checkList) {
+            case 1:
+                this.state.checkList1Tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> });
+                break;
+            case 2:
+                this.state.checkList2Tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> });
+                break;
+            case 3:
+                this.state.checkList3Tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> });
+                break;
+            case 4:
+                this.state.checkList4Tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> });
+                break;
+            default:
+                return <p>broked</p>
+                break;
+        }
     }
 }
 
