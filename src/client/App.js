@@ -145,43 +145,45 @@ class App extends React.Component {
 
     render() {
         return (
-        <div className={this.props.classes.root}>
-            <CssBaseline />
-        <AppBar position="fixed" className={this.props.classes.appBar}>
-            <Toolbar>
-                <Typography variant="h6" color="inherit" noWrap>
-                Tasks
-                </Typography>
-            </Toolbar>
-            </AppBar>
-            <Drawer
-            className={this.props.classes.drawer}
-            variant="permanent"
-            classes={{
-                paper: this.props.classes.drawerPaper,
-            }}
-            anchor="left"
-            >
-            <img src="public/tee.png" height="100" width="220" style={{marginTop: "10px", marginLeft: "10px", marginBottom: "-50px"}}/>
-            <div className={this.props.classes.toolbar} />  
-            <Divider />
-            <List>
-                {['Network', 'Git', 'Shell', 'Checklist 4'].map((text, index) => (
-                <ListItem button key={text} onClick={() => this.handleChecklistClick(index + 1)}>
-                    <ListItemIcon><BuildIcon/></ListItemIcon>
-                    <ListItemText primary={text} />
-                </ListItem>
-                ))}
-            </List>
-            <Divider />
-            </Drawer>
-            <main className={this.props.classes.content}>
-            <div className={this.props.classes.toolbar} />
-            <Grid container direction="column" alignItems="stretch" spacing={16}>
-                    {this.renderItems()}
-            </Grid>
-            </main>
-        </div>
+        <MuiThemeProvider theme={styles}>
+            <div className={this.props.classes.root}>
+                <CssBaseline />
+            <AppBar position="fixed" className={this.props.classes.appBar}>
+                <Toolbar>
+                    <Typography variant="h6" color="inherit" noWrap>
+                    Tasks
+                    </Typography>
+                </Toolbar>
+                </AppBar>
+                <Drawer
+                className={this.props.classes.drawer}
+                variant="permanent"
+                classes={{
+                    paper: this.props.classes.drawerPaper,
+                }}
+                anchor="left"
+                >
+                <img src="public/tee.png" height="100" width="220" style={{marginTop: "10px", marginLeft: "10px", marginBottom: "-50px"}}/>
+                <div className={this.props.classes.toolbar} />  
+                <Divider />
+                <List>
+                    {['Network', 'Git', 'Shell', 'Checklist 4'].map((text, index) => (
+                    <ListItem button key={text} onClick={() => this.handleChecklistClick(index + 1)}>
+                        <ListItemIcon><BuildIcon/></ListItemIcon>
+                        <ListItemText primary={text} />
+                    </ListItem>
+                    ))}
+                </List>
+                <Divider />
+                </Drawer>
+                <main className={this.props.classes.content}>
+                <div className={this.props.classes.toolbar} />
+                <Grid container direction="column" alignItems="stretch" spacing={16}>
+                        {this.renderItems()}
+                </Grid>
+                </main>
+            </div>
+        </MuiThemeProvider>
         );
     }
 
