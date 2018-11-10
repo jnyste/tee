@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import withRoot from 'withRoot';
+import withRoot from './withRoot.js';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
@@ -179,16 +179,16 @@ class App extends React.Component {
     renderItems() {
         switch (this.state.checkList) {
             case 1:
-                return this.state.checkList1Tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> });
+                return this.state.checkList1Tasks.steps.map((task, index) => {return <MyListItem key={checkList + index} text={task.title} action={task.shell} description={task.description}/> });
                 break;
             case 2:
-                return this.state.checkList2Tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> });
+                return this.state.checkList2Tasks.steps.map((task, index) => {return <MyListItem key={checkList + index} text={task.title} action={task.shell} description={task.description}/> });
                 break;
             case 3:
-                return this.state.checkList3Tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> });
+                return this.state.checkList3Tasks.steps.map((task, index) => {return <MyListItem key={checkList + index} text={task.title} action={task.shell} description={task.description}/> });
                 break;
             case 4:
-                return this.state.checkList4Tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> });
+                return this.state.checkList4Tasks.steps.map((task, index) => {return <MyListItem key={checkList + index} text={task.title} action={task.shell} description={task.description}/> });
                 break;
             default:
                 return <p>broked</p>
