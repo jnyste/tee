@@ -158,7 +158,7 @@ class App extends React.Component {
         return (
         <div className={this.props.classes.root}>
             <CssBaseline />
-        <AppBar title={<img src="public/tee.png"/>} position="fixed" className={this.props.classes.appBar}>
+        <AppBar position="fixed" className={this.props.classes.appBar}>
             <Toolbar>
                 <Typography variant="h6" color="inherit" noWrap>
                 Tasks
@@ -173,6 +173,7 @@ class App extends React.Component {
             }}
             anchor="left"
             >
+            <img src="public/tee.png" height="25" width="25"/>
             <div className={this.props.classes.toolbar} />  
             <Divider />
             <List>
