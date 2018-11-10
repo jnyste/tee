@@ -94,7 +94,7 @@ class App extends React.Component {
                 "author": "jjas <julius.salonen@visma.com>",
                 "steps": [
                      {"title": "Pull this app from git",
-                      "description": "dajnodjnof",
+                      "description": "Pull this app from git and reload it.",
                       "shell": "/api/pullFromGit",
                       "interactive": true}
                 ]
