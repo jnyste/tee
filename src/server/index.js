@@ -30,9 +30,10 @@ app.get('/api/shellPing/*', function(req, res) {
 });
 
 app.get('/api/shellScript/*', function(req, res) {
-  file = req.url.substring(17);
-  dir = "scripts/";
-  res.send(shell.exec("bash " + dir + file).stdout);
+  let file = req.url.substring(17);
+  let dir = "scripts/";
+  let cmd = shell.exec("bash " + dir + file);
+  res.send({status: cmd.code, out: cmd.stdout});
 })
 
 app.listen(8080, () => console.log('Listening on port 8080!'));
