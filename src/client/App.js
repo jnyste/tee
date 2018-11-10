@@ -64,7 +64,7 @@ const styles = theme => createMuiTheme({
     toolbar: theme.mixins.toolbar,
     content: {
       flexGrow: 1,
-      backgroundColor: theme.palette.background.default,
+      backgroundColor: theme.palette.background,
       padding: theme.spacing.unit * 3,
     },
 });
