@@ -70,7 +70,8 @@ class MyListItem extends React.Component {
         <Grid item xs={12}>
             <Paper onClick={this.handleClick} className={this.getClass(this.state.status)}>
                 <Typography component="h3" variant="h4">{ this.renderStatus() } {this.props.text}</Typography>
-                <Typography variant="subtitle1" gutterBottom>{ this.props.description}  <Typography variant="subtitle2" gutterBottom>{this.props.action} </Typography> </Typography>
+                <Typography variant="subtitle1" gutterBottom>{ this.props.description}</Typography>
+                <Typography variant="subtitle2" gutterBottom>{this.props.action} </Typography>
             </Paper>
         </Grid>
         //</ButtonBase>
