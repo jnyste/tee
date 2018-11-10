@@ -55,13 +55,13 @@ function App(props) {
         {"title": "ping google",
             "type": "step-task",
             "description": "this shit pings google",
-            "shell": "ping 8.8.8.8",
+            "shell": "/api/shellPing/www.google.com",
            "interactive": true},
          
-         {"title": "do something",
+         {"title": "ping fake website",
           "type": "manual-task",
           "description": "yeah do this thing",
-          "shell": "",
+          "shell": "/api/shellPing/www.iajsdiaisdasfhasuf.com",
           "interactive": false
          }
     ]
