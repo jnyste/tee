@@ -74,14 +74,14 @@ class App extends React.Component {
                 "steps": [
                     {"title": "Ping Google",
                         "type": "step-task",
-                        "description": "this shit pings google",
+                        "description": "This pings google.",
                         "shell": "/api/shellPing/www.google.com",
                        "interactive": true},
                      
                      {"title": "Ping a fake website",
                       "type": "manual-task",
-                      "description": "yeah do this thing",
-                      "shell": "/api/shellPing/www.iajsdiaisdasfhasuf.com",
+                      "description": "Ping a website that doesn't exist.",
+                      "shell": "/api/shellPing/www.asddsaasdasd.com",
                       "interactive": false
                      }
                 ]
