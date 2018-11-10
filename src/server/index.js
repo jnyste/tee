@@ -29,4 +29,9 @@ app.get('/api/shellPing/*', function(req, res) {
   });
 });
 
+app.get('/api/shellScript/*', function(req, res) {
+  file = req.url.substring(17);
+  res.send(file);
+})
+
 app.listen(8080, () => console.log('Listening on port 8080!'));
