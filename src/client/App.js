@@ -161,7 +161,7 @@ class App extends React.Component {
         <AppBar title={<img src="public/tee.png"/>} position="fixed" className={this.props.classes.appBar}>
             <Toolbar>
                 <Typography variant="h6" color="inherit" noWrap>
-                Tasks
+                Tasks<img src="public/tee.png"/>
                 </Typography>
             </Toolbar>
             </AppBar>
