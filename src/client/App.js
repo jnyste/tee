@@ -16,6 +16,8 @@ import BuildIcon from '@material-ui/icons/Build';
 import MyListItem from './MyListItem.js'
 import Grid from '@material-ui/core/Grid';
 import Checkbox from '@material-ui/core/Checkbox';
+import { withTheme } from '@material-ui/core/styles';
+
 
 const theme = createMuiTheme({
   palette: {
@@ -44,7 +46,7 @@ const styles = theme => createMuiTheme({
         background: {
           default: "#101010"
         }
-      },
+    },
     root: {
       display: 'flex',
     },
@@ -206,4 +208,5 @@ class App extends React.Component {
     }
 }
 
-export default withStyles(styles)(App);
+// export default withStyles(styles)(App);
+export default withTheme()(withStyles(styles)(App));
