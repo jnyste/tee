@@ -169,15 +169,15 @@ class App extends React.Component {
             <main className={this.props.classes.content}>
             <div className={this.props.classes.toolbar} />
             <Grid container direction="column" alignItems="stretch" spacing={16}>
-                    {this.renderItems()}
+                    {this.renderItems(this.state.checkList)}
             </Grid>
             </main>
         </div>
         );
     }
 
-    renderItems() {
-        switch (this.state.checkList) {
+    renderItems(checkList) {
+        switch (checkList) {
             case 1:
                 this.state.checkList1Tasks.steps.map((task, index) => {return <MyListItem text={task.title} action={task.shell} description={task.description}/> });
                 break;
