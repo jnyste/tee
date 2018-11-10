@@ -32,9 +32,21 @@ const theme = createMuiTheme({
   }
 });
 
-const styles = theme => ({
+const styles = theme => createMuiTheme({
     root: {
       display: 'flex',
+      palette: {
+        type: "dark",
+        primary: {
+          main: "#43563f"
+        },
+        secondary: {
+          main: "#97c16b"
+        },
+        background: {
+          default: "#101010"
+        }
+      },
     },
     appBar: {
       width: `calc(100% - ${drawerWidth}px)`,
