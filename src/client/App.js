@@ -47,8 +47,10 @@ class App extends React.Component {
 
     constructor(props) {
         super(props);
+        this.handleChecklistClick = this.handleChecklistClick.bind(this);
         this.state = {
-            tasks: {
+            checkList: 1,   
+            checkList1Tasks: {
                 "title": "Sample IP Troubleshooter",
                 "type": "checklist",
                 "id": "sipt-1",
@@ -68,8 +70,12 @@ class App extends React.Component {
                       "interactive": false
                      }
                 ]
-              }
+            }
         }
+    }
+
+    handleChecklistClick(idx) {
+        console.log(idx);
     }
 
     render() {
@@ -95,7 +101,7 @@ class App extends React.Component {
             <Divider />
             <List>
                 {['Checklist 1', 'Checklist 2', 'Checklist 3', 'Checklist 4'].map((text, index) => (
-                <ListItem button key={text}>
+                <ListItem button key={text} onClick={() => this.handleChecklistClick(index + 1)}>
                     <ListItemIcon><BuildIcon/></ListItemIcon>
                     <ListItemText primary={text} />
                 </ListItem>
