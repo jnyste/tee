@@ -19,27 +19,6 @@ import Grid from '@material-ui/core/Grid';
 import Checkbox from '@material-ui/core/Checkbox';
 
 const drawerWidth = 240;
-const listOfTasks = {
-    "title": "Sample IP Troubleshooter",
-    "type": "checklist",
-    "id": "sipt-1",
-    "category": "Networking",
-    "author": "jjas <julius.salonen@visma.com>",
-    "steps": [
-        {"title": "ping google",
-            "type": "step-task",
-            "description": "this shit pings google",
-            "shell": "ping 8.8.8.8",
-           "interactive": true},
-         
-         {"title": "do something",
-          "type": "manual-task",
-          "description": "yeah do this thing",
-          "shell": "",
-          "interactive": false
-         }
-    ]
-  };
 
 const styles = theme => ({
   root: {
@@ -66,6 +45,27 @@ const styles = theme => ({
 
 function App(props) {
   const { classes } = props;
+  const listOfTasks = {
+    "title": "Sample IP Troubleshooter",
+    "type": "checklist",
+    "id": "sipt-1",
+    "category": "Networking",
+    "author": "jjas <julius.salonen@visma.com>",
+    "steps": [
+        {"title": "ping google",
+            "type": "step-task",
+            "description": "this shit pings google",
+            "shell": "ping 8.8.8.8",
+           "interactive": true},
+         
+         {"title": "do something",
+          "type": "manual-task",
+          "description": "yeah do this thing",
+          "shell": "",
+          "interactive": false
+         }
+    ]
+  };
 
   return (
     <div className={classes.root}>
@@ -100,7 +100,7 @@ function App(props) {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Grid container direction="column" alignItems="stretch" spacing={16}>
-             {{listOfTasks}.map((task, index) => {return <MyListItem text={task.title} action={task.shell}/> })}
+             {this.listOfTasks.map((task, index) => {return <MyListItem text={task.title} action={task.shell}/> })}
         </Grid>
       </main>
     </div>
