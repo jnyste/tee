@@ -4,6 +4,9 @@ import App from './App';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
+  typography: {
+    useNextVariants: true
+  },
   palette: {
     type: "dark",
     primary: {
@@ -18,4 +21,7 @@ const theme = createMuiTheme({
   }
 });
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<MuiThemeProvider theme={theme}>
+    <App />
+    </MuiThemeProvider>
+  , document.getElementById('root'));
