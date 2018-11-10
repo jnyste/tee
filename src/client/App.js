@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import withRoot from 'withRoot';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
@@ -11,8 +12,6 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import BuildIcon from '@material-ui/icons/Build';
 import MyListItem from './MyListItem.js'
 import Grid from '@material-ui/core/Grid';
@@ -198,4 +197,4 @@ class App extends React.Component {
     }
 }
 
-export default withStyles(styles)(App);
+export default withRoot(withStyles(styles)(App));
